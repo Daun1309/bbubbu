@@ -111,7 +111,7 @@ function studio() {
                 <Swiper
                     slidesPerView={"auto"}
                     spaceBetween={5}
-                    // autoplay={{ delay: 1500, disableOnInteraction: false }}
+                    autoplay={{ delay: 1500, disableOnInteraction: false }}
                     modules={[Autoplay, Pagination, Navigation]}
                     className={styles.cont}
 
@@ -120,7 +120,7 @@ function studio() {
                         return (
 
                             <SwiperSlide key={k} className={styles.SwiperSlide}>
-                                <StudioCom value={v} url={v.url} studioName={v.studioName} src={v.src} time={v.time} adress={v.adress} call={v.call}></StudioCom>
+                                <StudioCom studioName={v.studioName} src={v.src} url={v.url} time={v.time} adress={v.adress} call={v.call}></StudioCom>
                             </SwiperSlide>
                         )
                     })}
@@ -149,10 +149,11 @@ function studio() {
                 <div className={styles.player}>
                     <div id='player' >
                         <YouTube
+                            className={styles.playerCont}
                             videoId={"0E3_EXhnp5M"}
                             opts={{
                                 width: "486",
-                                height: "284",
+                                height: "254",
                                 playerVars: {
                                     autoplay: 0, //자동재생 O
                                     modestbranding: 1, // 컨트롤 바에 youtube 로고를 표시하지 않음
@@ -163,10 +164,11 @@ function studio() {
                     </div>
                     <div id='player'>
                         <YouTube
+                            className={styles.playerCont}
                             videoId={"sbnjKIeKEL4"}
                             opts={{
                                 width: "486",
-                                height: "284",
+                                height: "254",
                                 playerVars: {
                                     autoplay: 0, //자동재생 O
                                     modestbranding: 1, // 컨트롤 바에 youtube 로고를 표시하지 않음
@@ -176,10 +178,11 @@ function studio() {
                     </div>
                     <div id='player'>
                         <YouTube
+                            className={styles.playerCont}
                             videoId={"e9uYIS-S8Ew"}
                             opts={{
                                 width: "486",
-                                height: "284",
+                                height: "254",
                                 playerVars: {
                                     autoplay: 0, //자동재생 O
                                     modestbranding: 1, // 컨트롤 바에 youtube 로고를 표시하지 않음
@@ -194,4 +197,3 @@ function studio() {
 }
 
 export default studio
-

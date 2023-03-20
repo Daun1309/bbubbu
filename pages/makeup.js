@@ -114,7 +114,7 @@ function makeup() {
                 <Swiper
                     slidesPerView={"auto"}
                     spaceBetween={5}
-                    // autoplay={{ delay: 1500, disableOnInteraction: false }}
+                    autoplay={{ delay: 1500, disableOnInteraction: false }}
                     modules={[Autoplay, Pagination, Navigation]}
                     className={styles.cont}
 
@@ -123,7 +123,7 @@ function makeup() {
                         return (
                             <>
                                 <SwiperSlide key={k} className={styles.SwiperSlide}>
-                                    <StudioCom value={v} url={v.url}></StudioCom>
+                                    <StudioCom studioName={v.studioName} src={v.src} url={v.url} time={v.time} adress={v.adress} call={v.call}></StudioCom>
                                 </SwiperSlide>
                             </>
                         )
@@ -142,10 +142,11 @@ function makeup() {
                 <div className={styles.player}>
                     <div id='player' >
                         <YouTube
+                            className={styles.playerCont}
                             videoId={"fX1At4bCREY"}
                             opts={{
                                 width: "486",
-                                height: "284",
+                                height: "254",
                                 playerVars: {
                                     autoplay: 0, //자동재생 O
                                     modestbranding: 1, // 컨트롤 바에 youtube 로고를 표시하지 않음
@@ -156,10 +157,11 @@ function makeup() {
                     </div>
                     <div id='player'>
                         <YouTube
+                            className={styles.playerCont}
                             videoId={"2JaJM5NBMP8"}
                             opts={{
                                 width: "486",
-                                height: "284",
+                                height: "254",
                                 playerVars: {
                                     autoplay: 0, //자동재생 O
                                     modestbranding: 1, // 컨트롤 바에 youtube 로고를 표시하지 않음
@@ -169,10 +171,11 @@ function makeup() {
                     </div>
                     <div id='player'>
                         <YouTube
+                            className={styles.playerCont}
                             videoId={"e0-MONKrcxY"}
                             opts={{
                                 width: "486",
-                                height: "284",
+                                height: "254",
                                 playerVars: {
                                     autoplay: 0, //자동재생 O
                                     modestbranding: 1, // 컨트롤 바에 youtube 로고를 표시하지 않음

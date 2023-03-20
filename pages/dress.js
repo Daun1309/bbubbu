@@ -115,7 +115,7 @@ function dress() {
                 <Swiper
                     slidesPerView={"auto"}
                     spaceBetween={5}
-                    // autoplay={{ delay: 1500, disableOnInteraction: false }}
+                    autoplay={{ delay: 1500, disableOnInteraction: false }}
                     modules={[Autoplay, Pagination, Navigation]}
                     className={styles.cont}
 
@@ -124,7 +124,7 @@ function dress() {
                         return (
                             <>
                                 <SwiperSlide key={k} className={styles.SwiperSlide}>
-                                    <StudioCom value={v} url={v.url}></StudioCom>
+                                    <StudioCom  studioName={v.studioName} src={v.src} url={v.url} time={v.time} adress={v.adress} call={v.call}></StudioCom>
                                 </SwiperSlide>
                             </>
                         )
@@ -143,10 +143,11 @@ function dress() {
                 <div className={styles.player}>
                     <div id='player' >
                         <YouTube
+                        className={styles.playerCont}
                             videoId={"Q1e1UYN-fOs"}
                             opts={{
                                 width: "486",
-                                height: "284",
+                                height: "254",
                                 playerVars: {
                                     autoplay: 0, //자동재생 O
                                     modestbranding: 1, // 컨트롤 바에 youtube 로고를 표시하지 않음
@@ -157,10 +158,11 @@ function dress() {
                     </div>
                     <div id='player'>
                         <YouTube
+                        className={styles.playerCont}
                             videoId={"DHz1XPu5m4I"}
                             opts={{
                                 width: "486",
-                                height: "284",
+                                height: "254",
                                 playerVars: {
                                     autoplay: 0, //자동재생 O
                                     modestbranding: 1, // 컨트롤 바에 youtube 로고를 표시하지 않음
@@ -170,10 +172,11 @@ function dress() {
                     </div>
                     <div id='player'>
                         <YouTube
+                        className={styles.playerCont}
                             videoId={"c4nQ2DpUYok"}
                             opts={{
                                 width: "486",
-                                height: "284",
+                                height: "254",
                                 playerVars: {
                                     autoplay: 0, //자동재생 O
                                     modestbranding: 1, // 컨트롤 바에 youtube 로고를 표시하지 않음

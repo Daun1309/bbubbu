@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 
 
-const StudioCom = ({studioName,src,url,time,adress,call }) => {
+const StudioCom = ({ studioName, src, url, time, adress, call }) => {
 
 
     const [hover, setHover] = useState('');
@@ -37,6 +37,7 @@ const StudioCom = ({studioName,src,url,time,adress,call }) => {
                     className={hover !== 'hover' ? `${styles.imsTest}` : `${styles.imsTest} ${styles.action}`}
                     src={url}
                     width={334} height={228}
+                    
                     alt='' />
             </div>
             {/* <div className={hover !== 'hover' ? `${styles.info}` : `${styles.info} ${styles.action}`}> */}
