@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 
 
-const StudioCom = ({ value,studioName,src,url }) => {
+const StudioCom = ({studioName,src,url,time,adress,call }) => {
 
 
     const [hover, setHover] = useState('');
@@ -41,9 +41,9 @@ const StudioCom = ({ value,studioName,src,url }) => {
             </div>
             {/* <div className={hover !== 'hover' ? `${styles.info}` : `${styles.info} ${styles.action}`}> */}
             <div className={styles.info}>
-                <p>#영업시간 : {value.time}</p>
-                <p>#주소 : {value.adress}</p>
-                <p>#전화번호 : {value.call}</p>
+                <p>#영업시간 : {time}</p>
+                <p>#주소 : {adress}</p>
+                <p>#전화번호 : {call}</p>
             </div>
         </>
     )

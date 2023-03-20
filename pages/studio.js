@@ -120,7 +120,7 @@ function studio() {
                         return (
 
                             <SwiperSlide key={k} className={styles.SwiperSlide}>
-                                <StudioCom value={v} url={v.url} studioName={v.studioName} src={v.src}></StudioCom>
+                                <StudioCom value={v} url={v.url} studioName={v.studioName} src={v.src} time={v.time} adress={v.adress} call={v.call}></StudioCom>
                             </SwiperSlide>
                         )
                     })}
